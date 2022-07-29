@@ -12,8 +12,6 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
     "commit": "git-cz",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -58,11 +56,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zainuddin99/js-async-utils.git"
+    "url": "git+https://github.com/Zainuddin99/js-async-utils.git"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "description": "Utilities for asynchronous tasks and functions",
+  "bugs": {
+    "url": "https://github.com/Zainuddin99/js-async-utils/issues"
+  },
+  "homepage": "https://github.com/Zainuddin99/js-async-utils#readme",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {},
+  "keywords": []
 }
