@@ -1,5 +1,5 @@
 //All utilities
-const promiseWrapper = (fn: () => any) => {
+export const promiseWrapper = (fn: () => any) => {
   return (...args: any[]) =>
     new Promise(async (resolve, reject) => {
       try {
@@ -10,5 +10,3 @@ const promiseWrapper = (fn: () => any) => {
       }
     });
 };
-
-module.exports = { promiseWrapper };
