@@ -1,4 +1,5 @@
-# async-utilities
+# js-async-utils
+
 Utilities for asynchronous tasks and functions
 
 ## promiseWrapper
@@ -12,8 +13,13 @@ const promise = (args) =>{
   return new Promise(async(resolve, reject)=>{
      try{
       //exectue task
-      
-      resolve()
+
+      //To reject
+      if(condition){
+        reject('message')
+      }
+
+      resolve(data)
      }catch(err){
       reject(err)
      }
@@ -24,24 +30,28 @@ const promise = (args) =>{
 //We can make this even simpler using promiseWrapper from async-utilities package
 
 ```js
-import {promiseWrapper} from 'async-utilities'
+import { promiseWrapper } from 'js-async-utils';
 
-const promise = promiseWrapper(async()=>{
+const promise = promiseWrapper(async args => {
   //Execute task
-  
-  return data
-  //If data needed in response
-})
+
+  //To reject
+  if (condition) {
+    throw new Error('message');
+  }
+
+  return data;
+});
 ```
 
 //To run this eg.
 
 ```js
-const executePromise = async() =>{
-  try{
-    const promiseResult = await promise(args)
-  }catch(err){
+const executePromise = async () => {
+  try {
+    const promiseResult = await promise(args);
+  } catch (err) {
     //HandldeError
   }
-}
+};
 ```
